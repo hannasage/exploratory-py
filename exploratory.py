@@ -73,11 +73,16 @@ def command_listener():
 
 # SCRIPT STARTS HERE
 
+host = input('MySQL Database Endpoint: ')
+user = input('Master User: ')
+passwd = input('Master Password: ')
+database = input('Database: ')
+
 mydb = mysql.connector.connect(
-  host="elder.cpmihxwddknw.us-east-2.rds.amazonaws.com",
-  user="root",
-  passwd="6MurP2rrVZuKv9egwF8Q",
-  database="innodb"
+  host=host,
+  user=user,
+  passwd=passwd,
+  database=database
 )
 
 table = input('Enter table: ')
